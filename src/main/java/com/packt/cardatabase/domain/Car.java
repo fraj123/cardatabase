@@ -13,19 +13,19 @@ public class Car {
   private String brand;
   private String model;
   private String color;
-  private String registerNunber;
-  private int year;
+  private String registerNumber;
+  private int years;
   private int price;
 
   public Car() { }
 
-  public Car(String brand, String model, String color, String registerNunber, int year, int price) {
+  public Car(String brand, String model, String color, String registerNumber, int years, int price) {
     super();
     this.brand = brand;
     this.model = model;
     this.color = color;
-    this.registerNunber = registerNunber;
-    this.year = year;
+    this.registerNumber = registerNumber;
+    this.years = years;
     this.price = price;
   }
   
@@ -61,20 +61,20 @@ public class Car {
       this.color = color;
   }
 
-  public String getRegisterNunber() {
-      return registerNunber;
+  public String getRegisterNumber() {
+      return registerNumber;
   }
 
-  public void setRegisterNunber(String registerNunber) {
-      this.registerNunber = registerNunber;
+  public void setRegisterNumber(String registerNumber) {
+      this.registerNumber = registerNumber;
   }
 
-  public void setYear(int year) {
-      this.year = year;
+  public void setYear(int years) {
+      this.years = years;
   }
 
   public int getYear() {
-      return year;
+      return years;
   }
 
   public int getPrice() {

@@ -6,6 +6,8 @@ import com.packt.cardatabase.domain.Car;
 import com.packt.cardatabase.domain.CarRepository;
 import com.packt.cardatabase.domain.Owner;
 import com.packt.cardatabase.domain.OwnerRepository;
+import com.packt.cardatabase.domain.User;
+import com.packt.cardatabase.domain.UserRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,6 +27,9 @@ public class CardatabaseApplication implements CommandLineRunner{
 
   @Autowired
   private OwnerRepository ownerRepository;
+
+  @Autowired
+  private UserRepository userRepository;
 
   public static void main(String[] args) {
     SpringApplication.run(CardatabaseApplication.class, args);
@@ -47,6 +52,9 @@ public class CardatabaseApplication implements CommandLineRunner{
     for (Car car : repository.findAll()) {
       logger.info(car.getBrand() + " " + car.getModel());
     }
+
+    userRepository.save(new User("user", "$2a$10$NVM0n8ElaRgg7zWO1CxUdei7vWoPg91Lz2aYavh9.f9q0e4bRadue", "USER"));
+    userRepository.save(new User("admin", "$2a$10$8cjz47bjbR4Mn8GMg9IZx.vyjhLXR/SKKMSZ9.mP9vpMu0ssKi8GW", "ADMIN"));
   }
 
 }

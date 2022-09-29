@@ -8,3 +8,5 @@ services:
       - 3306:3306
     environment:
       MYSQL_ROOT_PASSWORD: 6?+Kf_Z2YFU9wGa-Yn2T
+      MYSQL_DATABASE: cardb
+      MYSQL_USER: root
